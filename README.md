@@ -24,6 +24,7 @@ git clone https://github.com/herouu/shadowbot-visual-flow.git ~/.claude/skills/s
 |---|---|
 | `SKILL.md` | 总纲：适用边界、端点与 schema 路径、建流四步、积木硬约束 11 条、作用域铁律、可视化数据流设计模式、指纹浏览器多环境 × 多身份轮换 × 出口隔离、运维与引擎坑、分层排障方法论、最小闭环骨架 |
 | `references/mcp-payloads.md` | MCP 通联细节、建流四步、payload 语义值、运行/等待/日志、易错字段、错误文本截断 |
+| `references/mcp-service.md` | 本地 MCP 服务的性质与能力面辨析（内置本地服务 vs 官方开源/云端 MCP）、`tools/list` 能力探测、版本风险防御、与官方 CLI 的分工 |
 | `references/blocks-scope.md` | 原型字段查询纪律、隐式输出全局递增编号、作用域与异常模式、结构配对自检脚本 |
 | `references/excel-blocks.md` | Excel / 表格类积木的读写语义与「写回五条口径」 |
 | `references/patterns.md` | 数据流设计模式：幂等键 / 只改目标行 / 哨兵值 / 防空覆盖 / 名次归一 / 节流熔断 / 失败形态判定 / best-effort / 回滚点 |

@@ -20,6 +20,7 @@ description: Use when building, modifying, or debugging a 影刀(ShadowBot) 可�
   → 查原型名、字段名、类型、`choices`、输出名的唯一权威来源（catalog 是「原型名 | 说明」清单，detail 是 `<原型名>{JSON}` 定义）。
 - 应用目录：`%LOCALAPPDATA%\ShadowBot\users\<uid>\apps\<uuid>\xbot_robot\`
 - 影刀 CLI：`shadowbot.shell-cli.exe`（在安装目录下）
+- **这个 MCP 是什么**：客户端**自带的本地服务**（标准 MCP JSON-RPC、无鉴权、工具 schema 由 `tools/list` 自描述）—— **不需要逆向**，但**不是文档化的对外 API**，无兼容性承诺。所以：**动手前先 `tools/list` 探测能力集**，端点与工具名做成**可配置**，缺工具要立刻显式报错。详见 `references/mcp-service.md`。
 
 ## §2 建流四步（必须按此顺序）
 ```
@@ -123,6 +124,7 @@ flow.edit_blocks(insert) → flow.fill_blocks → diagnostics.snapshot(断言) �
 
 ## §10 References（按需读取，勿一次全读）
 - `references/mcp-payloads.md` — MCP 通联细节、建流四步、语义值、运行/日志、易错字段
+- `references/mcp-service.md` — 本地 MCP 服务的性质与能力面辨析、能力探测与版本风险防御、官方 CLI 的分工
 - `references/blocks-scope.md` — 原型/字段查询方法、隐式输出编号规则、作用域与异常模式
 - `references/excel-blocks.md` — Excel / 表格类积木的读写语义与坑
 - `references/patterns.md` — 可视化数据流设计模式（幂等 / 防空覆盖 / 节流熔断 / best-effort）
